@@ -48,10 +48,17 @@ const loadNotes = () => {
   }
 };
 
+const listNotes = () => {
+  console.log(chalk.bgGreen("your notes"))
+  const notes = loadNotes();
+  notes.forEach((note) => console.log(chalk.magenta(note.title)));
+};
+
 // removeNote("fullstack");
 // addNote('cali')
 module.exports = {
   getNotes,
   addNote,
   removeNote,
+  listNotes,
 };
